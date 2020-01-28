@@ -1,0 +1,16 @@
+<div class="accordion" id="menu-accordion">
+  <a data-toggle="collapse" data-target="#item-collapse" aria-expanded="true" aria-controls="item-collapse"
+    class="black-text font-weight-bold h5">
+    <div class="d-flex justify-content-between">
+      <span>{{titulo}}</span>
+      <i class="fas fa-angle-down"></i>
+    </div>
+  </a>
+  <hr class="my-2 black">
+  <div id="item-collapse" class="collapse show" data-parent="#menu-accordion">
+    <div *ngFor="let accion of acciones">
+      <a routerLink={{accion.url}} class="black-text h6">{{accion.label}}</a>
+      <hr class="my-2">
+    </div>
+  </div>
+</div>

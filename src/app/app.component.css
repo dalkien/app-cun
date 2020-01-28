@@ -1,0 +1,17 @@
+.fuera {
+  background-image: url("../assets/img/mujer.png");
+  background-repeat:no-repeat;
+  background-size: 33%;
+  background-position: 20% 80% ;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.dentro {
+  background-image: url("../assets/img/mujer-transparencia.png");
+  background-repeat:no-repeat;
+  background-size: 33%;
+  background-position: 20% 80% ;
+  background-attachment: fixed;
+  height: 100vh;
+}

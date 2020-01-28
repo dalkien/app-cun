@@ -1,0 +1,57 @@
+<div class="text-center animated fadeIn">
+  <h5 class="font-weight-bold">{{titulo}}</h5>
+  <!-- <h6 class="h6-responsive">{{subtitulo}}</h6> -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-4 p-0">
+        <select class="custom-select custom-select-sm hoverable">
+          <option selected>Mostrar</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div class="col-8 p-0">
+        <div class="d-flex justify-content-end">
+          <div class="md-form md-outline form-sm m-0 col">
+            <input id="buscador-parametrizacion" class="form-control form-control-sm btn-outline-black" type="text">
+            <label class="mx-4 black-text" style="background-color: #E6E6E6;" for="buscador-parametrizacion">
+              Buscar
+            </label>
+          </div>
+          <button class="btn btn-danger btn-sm m-0 mb-2">
+            <i class="fas fa-search fa-lg"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="overflow-auto table-responsive">
+      <table class="table-hover table-sm rounded" border="1">
+        <thead class="grey lighten-1">
+          <tr>
+            <th scope="col" class="font-weight-bold">ID_transaccion</th>
+            <th scope="col" class="font-weight-bold">ID_registro</th>
+            <th scope="col" class="font-weight-bold">Nom_archivo</th>
+            <th scope="col" class="font-weight-bold">Fecha_proceso</th>
+            <th scope="col" class="font-weight-bold">Descrip_registro</th>
+            <th scope="col" class="font-weight-bold">Estado</th>
+            <th scope="col" class="font-weight-bold">Usuario</th>
+            <th scope="col" class="font-weight-bold">Descrip_fallo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let par of parametrizaciones">
+            <td>{{par.idTran}}</td>
+            <td>{{par.idReg}}</td>
+            <td>{{par.nomArchivo}}</td>
+            <td>{{par.fechaProg}}</td>
+            <td>{{par.descripReg}}</td>
+            <td>{{par.estado}}</td>
+            <td>{{par.usuario}}</td>
+            <td>{{par.descripFallo}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

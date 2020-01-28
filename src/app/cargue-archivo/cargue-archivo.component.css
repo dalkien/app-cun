@@ -1,0 +1,19 @@
+.custom-file-label::after {
+    left: 0;
+    right: auto;
+    height: 37px;
+    padding: center 10px;
+    font-size: 18px;
+    border-left-width: 0;
+    background-color: #bdbdbd;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+    font-weight: bold;
+}
+
+.custom-file-label {
+  color: #bdbdbd;
+  border: solid #757575;
+  background-color: transparent;
+
+}

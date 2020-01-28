@@ -1,0 +1,50 @@
+<div class="text-center">
+  <h5 class="font-weight-bold">{{titulo}}</h5>
+  <h6 class="h6-responsive">{{subtitulo}}</h6>
+
+  <!-- TABLAS -->
+  <div class="container-fluid">
+    <div class="row overflow-auto px-1">
+      <table class="table-hover col-md-6 table-sm rounded" border="1">
+        <thead class="grey lighten-1">
+          <tr>
+            <th scope="col" class="font-weight-bold">Enviado a FullStack</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let aF of aFullStack; let i = index">
+            <td>
+              <div class="d-flex justify-content-between px-2">
+                <span>{{i+1}}. {{aF.nombre}}</span>
+                <a data-toggle="modal" data-target="#modal-confirmar-descarga">
+                  <i class="fas fa-cloud-download-alt fa-lg"></i>
+                </a>
+              </div>
+              <app-confirmar-descarga [archivo]="aF.nombre"></app-confirmar-descarga>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table-hover col-md-6 table-sm rounded" border="1">
+        <thead class="grey lighten-1">
+          <tr>
+            <th scope="col" class="font-weight-bold">Respuesta de FullStack</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let deF of deFullStack">
+            <td>
+              <div class="d-flex justify-content-between px-2">
+                <span>{{deF.nombre}}</span>
+                <a><i class="fas fa-cloud-download-alt fa-lg"></i></a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- ----- -->
+  <hr class="black">
+  <app-cargue-archivo></app-cargue-archivo>
+</div>

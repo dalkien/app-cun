@@ -1,0 +1,80 @@
+<div class="text-center">
+  <h5 class="font-weight-bold">{{titulo}}</h5>
+  <h6 class="h6-responsive">{{subtitulo}}</h6>
+  <div class="container-flud">
+    <div *ngIf="estado==false; else desactivarDiv">
+      <div class="row">
+        <div class="col-6 px-1">
+          <div style="min-height: 250px;" class="btn-outline-success rounded flex-center flex-column">
+            <i class="fas fa-phone-volume fa-5x mb-3"></i>
+            <button data-toggle="modal" type="button" data-target="#modal-activar" class="btn btn-success">activar
+              emergencia</button>
+          </div>
+        </div>
+        <div class="col-6 px-1">
+          <div style="min-height: 250px;" class="btn-outline-blue-grey rounded flex-center flex-column">
+            <i class="fas fa-phone-volume fa-5x mb-3"></i>
+            <button class="btn btn-blue-grey">desactivar emergencia</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="modal-activar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content text-center">
+            <div class="modal-header border-0">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <i class="far fa-times-circle fa-lg danger-ic"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h6 class="h6-responsive font-weight-bold mb-4">¿Está seguro que desea activar el estado de emergencia
+                para la priorización de tráfico de voz?</h6>
+              <div class="d-flex justify-content-around">
+                <button type="button" class="btn btn-success">Aceptar</button>
+                <button type="button" class="btn btn-danger font-weight-bold" data-dismiss="modal">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #desactivarDiv>
+      <div class="row">
+        <div class="col-6 px-1">
+          <div style="min-height: 250px;" class="btn-outline-blue-grey rounded flex-center flex-column">
+            <i class="fas fa-phone-volume fa-5x mb-3"></i>
+            <button class="btn btn-blue-grey">activar
+              emergencia</button>
+          </div>
+        </div>
+        <div class="col-6 px-1">
+          <div style="min-height: 250px;" class="btn-outline-danger rounded flex-center flex-column">
+            <i class="fas fa-phone-volume fa-5x mb-3"></i>
+            <button data-toggle="modal" type="button" data-target="#modal-desactivar" class="btn btn-danger">desactivar emergencia</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="modal-desactivar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content text-center">
+            <div class="modal-header border-0">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <i class="far fa-times-circle fa-lg danger-ic"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h6 class="h6-responsive font-weight-bold mb-4">¿Está seguro que desea desactivar el estado de emergencia
+                para la priorización de tráfico de voz?</h6>
+              <div class="d-flex justify-content-around">
+                <button type="button" class="btn btn-success">Aceptar</button>
+                <button type="button" class="btn btn-danger font-weight-bold" data-dismiss="modal">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</div>
